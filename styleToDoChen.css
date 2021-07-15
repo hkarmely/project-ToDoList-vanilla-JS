@@ -1,0 +1,137 @@
+
+@font-face {
+    font-family: 'zZing-Easy';
+    src: url('assets/Zing\ Easy.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-image: url('assets/board-background-image.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    direction: rtl;
+
+  }
+
+.container{
+
+    text-align: center;
+  }
+
+h1 {
+    text-align: center;
+    font-family: 'zZing-Easy';
+    font-size: 80px;
+    margin: 0px;
+}
+
+#formId2 {
+    width: 500px;
+    height: 130px;
+    background-image: url('assets/note-taking-background.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding-right: auto;
+    font-size:20px;
+    display: flex;
+    margin: auto;
+    padding-top:3px;
+
+}
+
+
+.task{
+    transition: opacity 7000ms;
+    will-change: opacity;
+    background-color: rgb(233, 235, 109);
+    margin: 20px;
+    padding-right: 40px;
+    padding-top: 35px;
+    width: 200px;
+    margin: 0 auto;
+    height: 280px;
+    color: black;
+    margin: 20px;
+    background-image: url('assets/sticky-notes-backgroung.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    /* flex-wrap: wrap; */
+    position: relative;
+  
+    
+}
+
+/* https://youtu.be/29deL9MFfWc */
+
+
+
+.task:hover {
+    transform: translateY(1rem);
+    transform: rotate(-5deg);
+
+}
+
+.task-faded-in{
+    opacity: 0;
+}
+
+
+.innerText{
+    position: relative;
+    overflow-y: auto;    
+}
+
+.dateText{
+    margin-left: 10px;
+    position: absolute;
+    left: 0.5rem;
+    margin-top: 12.3rem;
+    z-index:1;
+    background-color: rgb(233, 235, 109);
+
+}
+
+#taskList{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: left;
+    justify-content: right;
+    text-align:right;   
+
+    
+}
+
+.targetTimeContainer{
+    height: 0px;
+    width: 0px;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.extraClass{
+   
+}
+/* 
+div :nth-child(3n) {
+  background: red;
+
+} */
+
+.taskBtn{
+    position: relative;
+    width:3px;
+    height:3px;
+    z-index: 2;
+    display: none;
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+}
+
+.task:hover .taskBtn{ 
+    display:block;
+    }
+

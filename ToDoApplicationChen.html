@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleToDoChen.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <title>Chen's Task Board</title>
+</head>
+
+<body onload="allTasksDisplay()">
+
+    <h1>My Task Board</h1>
+    <div id="formId2">
+
+
+        <div class="container ">
+            <form action="" id="formId" class="container">
+                <div class="row justify-content-center">
+                    <input type="textarea" placeholder="צור פתקית חדשה:)" name="Content" autofocus id="myInput"
+                        class="col-lg-12" required spanId="chen1">
+                </div>
+                <div class="row justify-content-center">
+                    <br />
+                    <input type="date" id="targetDate" name="targetDate" class="targetDateContainer  col-lg-4" required
+                        spanId="chen1">
+                    <input type="time" id="targetTime" name="targetTime" class="TimeContainer  col-lg-4">
+                    <br />
+                </div>
+                <div class="row justify-content-center">
+                    <button type="button" class="btn btn-primary col-lg-3"
+                        onClick="checkAndCrate(myInput,targetDate,targetTime);">צור
+                        משימה</button>
+                    <div class="col-lg-1"></div>
+                    <input type="reset" class="btn btn-primary col-lg-3" value="אפס"
+                        onclick="clearForm(myInput,targetDate,chen1);">
+                    <br />
+                    <span id="chen1"></span>
+
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div id="taskList" class="row">
+
+        </div>
+    </div>
+
+    <script src=" toDoApplicationChen.js"></script>
+</body>
+
+</html>
